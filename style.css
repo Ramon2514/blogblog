@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que bordas não quebrem o tamanho dos elementos */
+}
+
+/* 2. BASE DO SITE: Define fontes, cores de fundo e alinhamento básico */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda a altura da tela do dispositivo */
+}
+
+/* 3. CARTÃO PRINCIPAL: Bloco de conteúdo centralizado */
+.card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+/* 4. TIPOGRAFIA: Estilização de títulos e textos */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+
+p {
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+/* 5. INTERAÇÃO: Botão customizado com efeito de clique */
+.botao {
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #10b981; /* Verde moderno */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+.botao:hover {
+    background-color: #059669;
+    transform: translateY(-1px);
+}
+
+/* Efeito ao clicar */
+.botao:active {
+    transform: translateY(1px);
+}
