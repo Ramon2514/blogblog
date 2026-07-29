@@ -1,57 +1,320 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
+    <title>Gabriel | Blog Pessoal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
-    <nav>
-        <p>Home </p>
-        <p>Detalhes</p>
-        <p>Frase do Dia</p>
-        <p>Sobre Nós</p>
-        <p>Empresa</p>
-        <p>Algo</p>
-        <p>Nao sei oque escrever</p>
 
-        <h1>Olá, eu sou <span>Gabriel</span></h1>
+<header>
 
-    <p>
-    Bem-vindo ao meu blog! Aqui compartilho meus projetos,
-    aprendizados, experiências com programação, desenvolvimento web,
-    hardware, Linux, eletrônica e tudo que estou estudando durante minha
-    jornada na área da tecnologia.
-    </p>
+<nav>
 
-    <a class="btn" href="#artigos">
-    Explorar conteúdo
-    </a>
-    Sobre mim
-    <h2 class="titulo">Quem sou eu?</h2>
+<div class="logo">
+    Gabriel<span>.dev</span>
+</div>
 
-    <p>
-    Sou estudante de Desenvolvimento de Sistemas e apaixonado por tecnologia.
-    Meu objetivo é evoluir constantemente como desenvolvedor, criando projetos
-    que resolvam problemas reais e compartilhando conhecimento através deste blog.
-    </p>
+<ul>
 
-    <form
-  action="https://formspree.io/f/xqerjqla"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
+<li><a href="#inicio">Início</a></li>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#artigos">Artigos</a></li>
+<li><a href="#projetos">Projetos</a></li>
+<li><a href="#contato">Contato</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero" id="inicio">
+
+<div class="hero-text">
+
+<h3>👋 Olá, eu sou</h3>
+
+<h1>Gabriel</h1>
+
+<h2>Desenvolvedor • Estudante • Apaixonado por Tecnologia</h2>
+
+<p>
+
+Bem-vindo ao meu blog pessoal!
+
+Aqui compartilho meus projetos, aprendizados,
+programação, desenvolvimento web,
+hardware, Linux, eletrônica e muito mais.
+
+</p>
+
+<a href="#artigos" class="btn">
+
+Explorar conteúdo
+
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700" alt="Computador">
+
+</div>
+
+</section>
+
+</header>
+
+<!-- SOBRE -->
+
+<section class="sobre" id="sobre">
+
+<div class="titulo">
+
+<h2>Quem sou?</h2>
+
+</div>
+
+<div class="sobre-container">
+
+<div class="foto">
+
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43?w=400">
+
+</div>
+
+<div class="texto">
+
+<h3>Prazer, eu sou Gabriel.</h3>
+
+<p>
+
+Sou estudante de Desenvolvimento de Sistemas
+e apaixonado por tecnologia.
+
+Meu objetivo é evoluir constantemente
+como desenvolvedor, aprendendo novas tecnologias
+e criando projetos úteis.
+
+</p>
+
+<p>
+
+Este blog serve para registrar minha evolução,
+compartilhar conhecimentos
+e publicar projetos desenvolvidos durante minha jornada.
+
+</p>
+
+<div class="info">
+
+<div>
+
+<h4>+20</h4>
+
+<span>Projetos</span>
+
+</div>
+
+<div>
+
+<h4>5+</h4>
+
+<span>Tecnologias</span>
+
+</div>
+
+<div>
+
+<h4>100%</h4>
+
+<span>Dedicação</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ARTIGOS -->
+
+<section class="artigos" id="artigos">
+
+<div class="titulo">
+
+<h2>Últimos artigos</h2>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-brands fa-html5"></i>
+
+<h3>HTML & CSS</h3>
+
+<p>
+
+Aprenda a construir páginas modernas utilizando HTML5 e CSS3.
+
+</p>
+
+<a href="#">Ler artigo →</a>
+
+</div>
+
+<div class="card">
+
+<i class="fa-brands fa-js"></i>
+
+<h3>JavaScript</h3>
+
+<p>
+
+Dicas, funções, DOM e interatividade para seus sites.
+
+</p>
+
+<a href="#">Ler artigo →</a>
+
+</div>
+
+<div class="card">
+
+<i class="fa-brands fa-linux"></i>
+
+<h3>Linux</h3>
+
+<p>
+
+Tutoriais, comandos úteis e personalização do sistema.
+
+</p>
+
+<a href="#">Ler artigo →</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJETOS -->
+
+<section class="projetos" id="projetos">
+
+<div class="titulo">
+
+<h2>Projetos</h2>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Blog Responsivo</h3>
+
+<p>
+
+Projeto desenvolvido em HTML, CSS e JavaScript.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Portfólio</h3>
+
+<p>
+
+Meu site pessoal apresentando trabalhos e experiências.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Sistema Web</h3>
+
+<p>
+
+Aplicação para gerenciamento de dados e usuários.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTATO -->
+
+<section class="contato" id="contato">
+
+<div class="titulo">
+
+<h2>Entre em contato</h2>
+
+</div>
+
+<form>
+
+<input type="text" placeholder="Seu nome">
+
+<input type="email" placeholder="Seu e-mail">
+
+<textarea placeholder="Digite sua mensagem"></textarea>
+
+<button>
+
+Enviar mensagem
+
+</button>
+
 </form>
+
+</section>
+
+<footer>
+
+<h3>Gabriel.dev</h3>
+
+<p>
+
+© 2026 - Todos os direitos reservados.
+
+</p>
+
+<div class="redes">
+
+<a href="#"><i class="fab fa-github"></i></a>
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
