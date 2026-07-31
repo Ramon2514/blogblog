@@ -276,20 +276,21 @@ Aplicação para gerenciamento de dados e usuários.
 
 </div>
 
-<form>
-
-<input type="text" placeholder="Seu nome">
-
-<input type="email" placeholder="Seu e-mail">
-
-<textarea placeholder="Digite sua mensagem"></textarea>
-
-<button>
-
-Enviar mensagem
-
-</button>
-
+<form
+  action="https://formspree.io/f/xdaqjgzn"
+  method="POST"
+  id="meu-form"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
 </form>
 
 </section>
