@@ -1,25 +1,17 @@
-function mensagem(){
+const form = document.getElementById("meu-form");
 
-    alert("Olá! Obrigado por visitar meu blog 😎");
-
-}
+const textoPost = document.getElementById("texto-post");
 
 
 
-const form = document.getElementById('meu-form');
-
-const textoPost = document.getElementById('texto-post');
-
-
-
-form.addEventListener('submit', async (e)=>{
+form.addEventListener("submit", async (e)=>{
 
 
     e.preventDefault();
 
 
 
-    textoPost.innerHTML = "🤖 A IA está pensando...";
+    textoPost.innerHTML = "🤖 Gabriel AI está processando...";
 
 
 
@@ -27,14 +19,16 @@ form.addEventListener('submit', async (e)=>{
 
 
         const response = await fetch(
-            'https://ramon25.app.n8n.cloud/webhook-test/b08b5a43-54c1-4e70-889e-6f4b345ab878',
+
+            "https://ramon25.app.n8n.cloud/webhook-test/b08b5a43-54c1-4e70-889e-6f4b345ab878",
+
             {
 
-                method:'POST',
+                method:"POST",
 
                 headers:{
 
-                    'Content-Type':'application/json'
+                    "Content-Type":"application/json"
 
                 },
 
@@ -42,14 +36,14 @@ form.addEventListener('submit', async (e)=>{
                 body:JSON.stringify({
 
                     email:
-                    document.getElementById('email').value,
+                    document.getElementById("email").value,
 
 
                     message:
-                    document.getElementById('message').value
+                    document.getElementById("message").value
+
 
                 })
-
 
             }
 
@@ -62,8 +56,8 @@ form.addEventListener('submit', async (e)=>{
 
 
 
-
         textoPost.innerHTML = marked.parse(text);
+
 
 
 
@@ -72,11 +66,12 @@ form.addEventListener('submit', async (e)=>{
     catch(error){
 
 
-        textoPost.innerHTML =
-        "❌ Erro ao conectar com a IA";
+        textoPost.innerHTML = 
+        "❌ Erro ao conectar com a inteligência artificial.";
 
 
-        console.log(error);
+
+        console.error(error);
 
 
     }

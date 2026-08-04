@@ -3,41 +3,53 @@
 
 <head>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Blog do Xaulim</title>
+<title>Gabriel | Tecnologia e Desenvolvimento</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style2.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style2.css">
 
 </head>
+
 
 <body>
 
 
 <header>
 
-    <h1>🔥 Blog do Xaulim 🔥</h1>
+<div class="perfil">
 
-    <p>
-        Meu pequeno espaço na internet
-    </p>
+<h1>Gabriel.dev</h1>
+
+<p>
+Desenvolvimento de Sistemas | Tecnologia | Programação
+</p>
+
+</div>
+
 
 </header>
 
 
 
+
 <nav>
 
-<a href="#">Inicio</a>
-<a href="#">Sobre Mim</a>
-<a href="#">Projetos</a>
-<a href="#">Contato</a>
+<a href="#sobre">Sobre</a>
+
+<a href="#projetos">Projetos</a>
+
+<a href="#posts">Posts</a>
+
+<a href="#ia">IA</a>
 
 </nav>
+
+
 
 
 
@@ -45,25 +57,27 @@
 <main>
 
 
-<section class="card">
 
-<h2>👤 Sobre Mim</h2>
+<section id="sobre" class="card">
+
+
+<h2>👨‍💻 Sobre mim</h2>
+
 
 <p>
-Olá, meu nome é Xaulim.
-Esse é meu blog pessoal onde vou colocar meus projetos,
-ideias, estudos e coisas que gosto.
+
+Olá, eu sou Gabriel, estudante e apaixonado por tecnologia,
+programação e desenvolvimento de soluções digitais.
+
 </p>
+
 
 <p>
-Gosto de programação, tecnologia, carros, motos
-e aprender coisas novas.
+
+Meu objetivo é transformar ideias em projetos utilizando
+código, automação e inteligência artificial.
+
 </p>
-
-
-<button onclick="mensagem()">
-Clique aqui
-</button>
 
 
 </section>
@@ -72,23 +86,53 @@ Clique aqui
 
 
 
-<section class="card">
+<section id="projetos" class="card">
 
 
-<h2>💻 Meus Projetos</h2>
+<h2>🚀 Projetos</h2>
 
 
-<ul>
+<div class="projetos">
 
-<li>Sites em HTML e CSS</li>
 
-<li>Programação JavaScript</li>
+<div>
 
-<li>Automação com IA</li>
+<h3>Web Sites</h3>
 
-<li>Projetos de Sistemas</li>
+<p>
+Criação de páginas modernas utilizando HTML, CSS e JavaScript.
+</p>
 
-</ul>
+</div>
+
+
+
+<div>
+
+<h3>Automação</h3>
+
+<p>
+Integração de sistemas utilizando APIs e inteligência artificial.
+</p>
+
+</div>
+
+
+
+
+<div>
+
+<h3>Sistemas</h3>
+
+<p>
+Desenvolvimento de aplicações e soluções personalizadas.
+</p>
+
+</div>
+
+
+
+</div>
 
 
 </section>
@@ -98,14 +142,62 @@ Clique aqui
 
 
 
-<section class="card">
+
+<section id="posts" class="card">
 
 
-<h2>🤖 Converse com minha IA</h2>
+<h2>📝 Últimos posts</h2>
+
+
+<article>
+
+<h3>
+Como a Inteligência Artificial está mudando a programação
+</h3>
 
 
 <p>
-Digite uma mensagem e veja a resposta da inteligência artificial.
+A IA está se tornando uma ferramenta essencial para
+desenvolvedores, aumentando produtividade e criando novas possibilidades.
+</p>
+
+
+</article>
+
+
+
+<article>
+
+<h3>
+Minha evolução na área de tecnologia
+</h3>
+
+
+<p>
+Aprendizados, projetos e experiências durante minha jornada
+como desenvolvedor.
+</p>
+
+
+</article>
+
+
+</section>
+
+
+
+
+
+
+
+<section id="ia" class="card">
+
+
+<h2>🤖 Assistente IA</h2>
+
+
+<p>
+Envie uma mensagem e converse com minha inteligência artificial.
 </p>
 
 
@@ -113,32 +205,23 @@ Digite uma mensagem e veja a resposta da inteligência artificial.
 <form id="meu-form">
 
 
-<label>
-Seu email:
-</label>
-
 <input 
 type="email"
 id="email"
-required
->
+placeholder="Seu email"
+required>
 
-
-
-<label>
-Mensagem:
-</label>
 
 
 <textarea 
 id="message"
-required>
-</textarea>
+placeholder="Digite sua mensagem"
+required></textarea>
 
 
 
-<button type="submit">
-Enviar para IA
+<button>
+Enviar
 </button>
 
 
@@ -146,26 +229,21 @@ Enviar para IA
 
 
 
-</section>
+<div class="resposta">
 
-
-
-
-
-<section class="card resposta">
-
-
-<h2>
-Resposta da IA:
-</h2>
-
+<h3>Resposta:</h3>
 
 <p id="texto-post">
-Bem vindo ao meu blog!
+Aguardando mensagem...
 </p>
 
 
+</div>
+
+
+
 </section>
+
 
 
 
@@ -176,16 +254,21 @@ Bem vindo ao meu blog!
 
 
 
+
 <footer>
 
 
 <p>
-© 2026 - Blog do Xaulim
+
+© 2026 Gabriel.dev
+
 </p>
 
 
 <p>
-Feito com HTML, CSS e JavaScript
+
+Desenvolvido com HTML, CSS, JavaScript e IA
+
 </p>
 
 
@@ -197,5 +280,6 @@ Feito com HTML, CSS e JavaScript
 
 
 </body>
+
 
 </html>
