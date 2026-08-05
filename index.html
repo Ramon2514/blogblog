@@ -3,12 +3,13 @@
 
 <head>
 
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Gabriel | Blog de Tecnologia</title>
-
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
 
@@ -19,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
@@ -59,17 +60,17 @@ Gabriel<span>.dev</span>
 
 <h1>Gabriel</h1>
 
-<h2>Desenvolvedor • Técnico em Desenvolvimento de Sistemas</h2>
+<h2>Desenvolvedor • Programador • Entusiasta de Tecnologia</h2>
 
 <p>
 
-Este é meu blog pessoal.
+Bem-vindo ao meu blog pessoal.
 
-Aqui compartilho conhecimentos sobre programação,
-inteligência artificial, hardware,
-Linux, projetos pessoais, automação com n8n
-e tudo o que aprendo durante minha jornada
-na área da tecnologia.
+Aqui compartilho projetos, experiências,
+programação, inteligência artificial,
+hardware, Linux, automações com n8n,
+desenvolvimento web e tudo o que estou aprendendo
+durante minha jornada na tecnologia.
 
 </p>
 
@@ -89,7 +90,7 @@ Experimentar a IA
 
 <div class="titulo">
 
-<h2>Sobre mim</h2>
+<h2>Sobre Mim</h2>
 
 </div>
 
@@ -97,23 +98,25 @@ Experimentar a IA
 
 <div class="texto">
 
-<h3>Minha jornada</h3>
+<h3>Quem sou eu?</h3>
 
 <p>
 
-Meu nome é Gabriel e sou apaixonado por tecnologia desde cedo.
+Meu nome é Gabriel e sou apaixonado por tecnologia,
+programação e desenvolvimento de sistemas.
 
-Atualmente estudo Desenvolvimento de Sistemas e gosto de criar
-sites modernos, aplicações web, automações utilizando n8n,
-projetos com Inteligência Artificial e diversos experimentos
-envolvendo programação.
+Criei este blog para compartilhar meus conhecimentos,
+mostrar meus projetos e documentar minha evolução
+como desenvolvedor.
 
 </p>
 
 <p>
 
-Este blog foi criado para documentar minha evolução,
-compartilhar conhecimento e publicar projetos para a comunidade.
+Aqui você encontrará conteúdos sobre HTML, CSS,
+JavaScript, Inteligência Artificial,
+Linux, automações com n8n e diversos projetos
+que desenvolvo no dia a dia.
 
 </p>
 
@@ -155,7 +158,7 @@ compartilhar conhecimento e publicar projetos para a comunidade.
 
 <div class="titulo">
 
-<h2>Últimos conteúdos</h2>
+<h2>Últimos Artigos</h2>
 
 </div>
 
@@ -183,7 +186,8 @@ Aprenda a criar páginas modernas utilizando HTML5 e CSS3.
 
 <p>
 
-Domine JavaScript e torne seus projetos muito mais interativos.
+Conheça técnicas para criar sites rápidos,
+interativos e profissionais.
 
 </p>
 
@@ -197,8 +201,8 @@ Domine JavaScript e torne seus projetos muito mais interativos.
 
 <p>
 
-Utilizando ChatGPT, APIs, automações com n8n
-e integração entre sistemas.
+Integrações com ChatGPT,
+n8n, APIs e automações inteligentes.
 
 </p>
 
@@ -216,43 +220,58 @@ e integração entre sistemas.
 
 </div>
 
-<p style="text-align:center;margin-bottom:35px;color:#bfc9d4;">
+<p style="text-align:center;color:#cbd5e1;margin-bottom:35px;">
 
-Faça uma pergunta e receba uma resposta utilizando minha automação.
+Faça uma pergunta para minha IA integrada ao n8n.
 
 </p>
+<form id="meu-form">
 
-<form
-action="https://formspree.io/f/xdaqjgzn"
-method="POST"
-id="meu-form">
+    <div>
 
-<input
-type="email"
-id="email"
-name="email"
-placeholder="Seu e-mail"
-required>
+        <label for="email">Digite seu e-mail</label>
 
-<textarea
-id="message"
-name="message"
-placeholder="Digite sua pergunta..."
-required></textarea>
+        <input
+            type="email"
+            id="email"
+            placeholder="Seu e-mail"
+            required>
 
-<button type="submit">
+    </div>
 
-Enviar para a IA
+    <div>
 
-</button>
+        <label for="message">Sua pergunta</label>
+
+        <textarea
+            id="message"
+            placeholder="Pergunte qualquer coisa..."
+            required></textarea>
+
+    </div>
+
+    <button type="submit">
+
+        Enviar para IA
+
+    </button>
 
 </form>
 
-<div id="texto-post" class="card" style="margin-top:40px;">
+<div id="texto-post" class="card">
 
-A resposta da IA aparecerá aqui...
+    <h3>🤖 Assistente IA</h3>
+
+    <p>
+
+        A resposta da IA aparecerá aqui após você enviar sua pergunta.
+
+    </p>
 
 </div>
+
+</section>
+
 <section id="contato">
 
 <div class="titulo">
@@ -261,25 +280,36 @@ A resposta da IA aparecerá aqui...
 
 </div>
 
-<p style="text-align:center;color:#bfc9d4;margin-bottom:30px;">
+<p style="text-align:center;color:#cbd5e1;margin-bottom:30px;">
 
-Gostou do projeto ou quer conversar sobre tecnologia?
-Entre em contato comigo.
+Gostou do blog? Entre em contato comigo ou acompanhe meus projetos.
 
 </p>
 
 <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
 
 <a href="#" class="btn">
-<i class="fab fa-github"></i> GitHub
+
+<i class="fab fa-github"></i>
+
+GitHub
+
 </a>
 
 <a href="#" class="btn">
-<i class="fab fa-linkedin"></i> LinkedIn
+
+<i class="fab fa-linkedin"></i>
+
+LinkedIn
+
 </a>
 
 <a href="#" class="btn">
-<i class="fab fa-instagram"></i> Instagram
+
+<i class="fab fa-instagram"></i>
+
+Instagram
+
 </a>
 
 </div>
@@ -292,7 +322,7 @@ Entre em contato comigo.
 
 <p>
 
-© 2026 • Desenvolvido com HTML, CSS, JavaScript, n8n e Inteligência Artificial.
+© 2026 • Blog desenvolvido com HTML, CSS, JavaScript, n8n e Inteligência Artificial.
 
 </p>
 
@@ -310,56 +340,45 @@ Entre em contato comigo.
 
 <script>
 
-const form = document.getElementById("meu-form");
-const textoPost = document.getElementById("texto-post");
+const form = document.getElementById('meu-form');
+const textoPost = document.getElementById('texto-post');
 
-form.addEventListener("submit", async (e)=>{
+form.addEventListener('submit', async (e) => {
 
-e.preventDefault();
+    e.preventDefault();
 
-textoPost.innerHTML = "<h3>🤖 A IA está pensando...</h3>";
+    textoPost.innerHTML = "<h3>🤖 A IA está pensando...</h3>";
 
-try{
+    try {
 
-const response = await fetch("COLOQUE_AQUI_O_LINK_DO_WEBHOOK_N8N",{
+        const response = await fetch(
+            'https://ramon25.app.n8n.cloud/webhook/b08b5a43-54c1-4e70-889e-6f4b345ab878',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: document.getElementById('email').value,
+                    message: document.getElementById('message').value
+                })
+            }
+        );
 
-method:"POST",
+        const text = await response.text();
 
-headers:{
-"Content-Type":"application/json"
-},
+        textoPost.innerHTML = marked.parse(text);
 
-body:JSON.stringify({
+    } catch (erro) {
 
-email:document.getElementById("email").value,
+        textoPost.innerHTML = `
+            <h3>Erro</h3>
+            <p>Não foi possível conectar com a IA.</p>
+        `;
 
-message:document.getElementById("message").value
+        console.error(erro);
 
-})
-
-});
-
-const resposta = await response.text();
-
-textoPost.innerHTML = marked.parse(resposta);
-
-}catch(error){
-
-textoPost.innerHTML=`
-
-<h2>Erro</h2>
-
-<p>
-
-Não foi possível conectar com a IA.
-
-</p>
-
-`;
-
-console.error(error);
-
-}
+    }
 
 });
 
