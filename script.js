@@ -1,9 +1,9 @@
 // ===============================
-// ANIMAÇÃO AO ROLAR A PÁGINA
+// ANIMAÇÕES AO ROLAR A PÁGINA
 // ===============================
 
 const elementos = document.querySelectorAll(
-    ".card, .sobre-container, .titulo, .hero-text, .hero-image, form"
+    ".card, .sobre-container, .titulo, .hero-text, form"
 );
 
 function revelarElementos() {
@@ -27,7 +27,6 @@ function revelarElementos() {
 window.addEventListener("scroll", revelarElementos);
 window.addEventListener("load", revelarElementos);
 
-
 // ===============================
 // MENU ATIVO
 // ===============================
@@ -43,7 +42,7 @@ window.addEventListener("scroll", () => {
 
         const topo = secao.offsetTop - 120;
 
-        if (scrollY >= topo) {
+        if (window.scrollY >= topo) {
 
             atual = secao.getAttribute("id");
 
@@ -65,7 +64,6 @@ window.addEventListener("scroll", () => {
 
 });
 
-
 // ===============================
 // BOTÃO VOLTAR AO TOPO
 // ===============================
@@ -73,7 +71,6 @@ window.addEventListener("scroll", () => {
 const botaoTopo = document.createElement("button");
 
 botaoTopo.innerHTML = "↑";
-
 botaoTopo.id = "topo";
 
 document.body.appendChild(botaoTopo);
@@ -88,12 +85,12 @@ border:none;
 border-radius:50%;
 background:#ff3b3b;
 color:white;
-font-size:26px;
+font-size:24px;
 cursor:pointer;
 display:none;
-box-shadow:0 10px 25px rgba(0,0,0,.35);
-transition:.3s;
 z-index:999;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+transition:.3s;
 `;
 
 window.addEventListener("scroll", () => {
@@ -110,7 +107,7 @@ window.addEventListener("scroll", () => {
 
 });
 
-botaoTopo.addEventListener("click", () => {
+botaoTopo.onclick = () => {
 
     window.scrollTo({
 
@@ -120,18 +117,15 @@ botaoTopo.addEventListener("click", () => {
 
     });
 
-});
-
+};
 
 // ===============================
-// EFEITO NOS CARDS
+// EFEITO DOS CARDS
 // ===============================
 
-const cards = document.querySelectorAll(".card");
+document.querySelectorAll(".card").forEach((card)=>{
 
-cards.forEach((card) => {
-
-    card.addEventListener("mousemove", (e) => {
+    card.addEventListener("mousemove",(e)=>{
 
         const rect = card.getBoundingClientRect();
 
@@ -141,49 +135,102 @@ cards.forEach((card) => {
 
         card.style.background = `
         radial-gradient(circle at ${x}px ${y}px,
-        rgba(255,59,59,.22),
-        #1e293b 55%)
+        rgba(255,59,59,.18),
+        #1e293b 60%)
         `;
 
     });
 
-    card.addEventListener("mouseleave", () => {
+    card.addEventListener("mouseleave",()=>{
 
-        card.style.background = "#1e293b";
+        card.style.background="#1e293b";
 
     });
 
 });
 
-
 // ===============================
-// EFEITO DE DIGITAÇÃO
+// DIGITAÇÃO DO TÍTULO
 // ===============================
 
 const titulo = document.querySelector(".hero h1");
 
-if (titulo) {
+if(titulo){
 
     const texto = titulo.textContent;
 
-    titulo.textContent = "";
+    titulo.textContent="";
 
-    let i = 0;
+    let i=0;
 
-    function escrever() {
+    function escrever(){
 
-        if (i < texto.length) {
+        if(i<texto.length){
 
-            titulo.textContent += texto.charAt(i);
+            titulo.textContent+=texto.charAt(i);
 
             i++;
 
-            setTimeout(escrever, 120);
+            setTimeout(escrever,120);
 
         }
 
     }
 
     escrever();
+
+}
+
+// ===============================
+// IA (N8N)
+// ===============================
+
+const form = document.getElementById("meu-form");
+const textoPost = document.getElementById("texto-post");
+
+if(form){
+
+form.addEventListener("submit", async (e)=>{
+
+e.preventDefault();
+
+textoPost.innerHTML = "<h3>🤖 A IA está pensando...</h3>";
+
+try{
+
+const response = await fetch("https://ramon25.app.n8n.cloud/webhook/b08b5a43-54c1-4e70-889e-6f4b345ab878",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+email:document.getElementById("email").value,
+
+message:document.getElementById("message").value
+
+})
+
+});
+
+const resposta = await response.text();
+
+textoPost.innerHTML = marked.parse(resposta);
+
+}catch(error){
+
+textoPost.innerHTML=`
+<h2>Erro ao conectar</h2>
+<p>Não foi possível obter resposta da IA.</p>
+`;
+
+console.error(error);
+
+}
+
+});
 
 }
